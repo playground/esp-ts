@@ -50,7 +50,10 @@ module.exports = {
     },
     modules: ['node_modules']
   },
-  externals: nodeModules,
+  externals: {
+    ...nodeModules,
+    'NRF': 'NRF'
+  },
   mode: 'production',
   target: 'node',
   node: {
